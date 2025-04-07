@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek | Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #f0f4ff, #fdf6ff);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header,
+        section,
+        footer {
+            padding: 2rem 1.5rem;
+            max-width: 960px;
+            margin: auto;
+        
+        }
+        footer{
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            padding-top: 4rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .profile-pic{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 1rem 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #2f80ed;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #1c60b3;
+        }
+
+        .services,
+        .projects,
+        .testimonials,
+        .cta {
+            margin-top: 3rem;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .service-item,
+        .testimonial,
+        .project {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-item:hover,
+        .testimonial:hover,
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project,
+        .testimonial {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .project img,
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-details,
+        .testimonial-details {
+            flex: 1;
+        }
+        .t
+
+        footer {
+            text-align: center;
+            padding-bottom: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .project,
+            .testimonial {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project img,
+            .testimonial img {
+                margin: auto;
+                height: auto;
+            }
+
+            .project-details {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://media.licdn.com/dms/image/v2/C4D03AQFdMUT8pxYcQQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1649780932651?e=1749686400&v=beta&t=uvkZbsv03pPLPch2ym_RbWmlCFZjeS1ksRJuEKUCU2Q" class="profile-pic"  alt="profile pic "/>
+        <h1>Hi, I’m Abhishek</h1>
+        <p>I help small businesses, freelancers & creators build fast, clean websites that convert.</p>
+        <p>Let’s build your online presence today 🚀.  </p>
+        <!-- <a href="https://wa.me/91XXXXXXXXXX" class="btn">WhatsApp Me</a> -->
+        <a href="#projects" class="btn">View Work</a>
+    </header>
+
+    <section class="services">
+        <h2>✨ What I Can Build For You</h2>
+        <ul>
+            <li class="service-item">Static Business Websites (startups, creators, service providers)</li>
+            <li class="service-item"> Web Apps (For startup, automating internal processes, or creating tools for your customers )</li>
+            <li class="service-item">Portfolio & Landing Pages (for events, SaaS, personal branding)</li>
+        </ul>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>🧑‍💻 Projects / Work Samples</h2>
+        <div class="project">
+            <img src="https://www.triazinesoft.com/img/clients-project/ticketkore/ticketkore-icon.png" alt="Ticketkore">
+            <div class="project-details"> <a href="https://ticketkore.io" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <strong>Ticketkore.io</strong> – Event ticketing platform (Production-level Web App)
+                </a></div>
+        </div>
+        <div class="project">
+            <img src="https://www.triazinesoft.com/img/clients-project/logo-icon/housepital.png" alt="Housepital">
+            <div class="project-details">
+                <a href="https://www.housepital.in/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                <strong> Housepital.in </strong> – Health services aggregator with location-based search </a></div>
+        </div>
+        <div class="project">
+            <img src="https://www.triazinesoft.com/img/clients-project/logo-icon/patched.png" alt="Housepital">
+            <div class="project-details">
+                <a href="https://dev.patched.tech/" target="_blank"
+                style="text-decoration: none; color: inherit;"> <strong> Patched.tech </strong> – Renting Lands Platform </a></div>
+        </div>
+        
+        <!-- <div class="project">
+            <img src="https://via.placeholder.com/80" alt="Ecommerce">
+            <div class="project-details">
+                <a href="https://www.housepital.in/" target="_blank"
+                style="text-decoration: none; color: inherit;">
+            <strong> Grassrootsmarketplace.org</strong>
+                 – Full-stack ecommerce solution for a marketplace </a>
+            </div>
+        </div> -->
+
+    </section>
+
+    <section class="testimonials">
+        <h2>🌟 What Clients Say</h2>
+        <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Rohan">
+            <div class="testimonial-details">"Abhishek delivered exactly what I needed, super fast. Highly recommend!" –
+                Rohan, Event Manager</div>
+        </div>
+        <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1590473159791-1d514fd3656e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Meera">
+            <div class="testimonial-details">"My portfolio site looks amazing thanks to Abhishek!" – Meera, Freelancer
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>📞 Let's Work Together</h2>
+        <p>Want a fast, clean website for your business or idea?</p>
+        <a href="mailto:abhishek1100861@gmail.com" class="btn">Email Me</a>
+        <!-- <a href="https://wa.me/d" class="btn">WhatsApp Me</a> -->
+    </section>
+
+    <footer>
+        <p>© 2025 Abhishek | Web Developer</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" style="margin-right: 1rem; text-decoration: none; color: #0a66c2;">
+            🔗 LinkedIn
+          </a>
+          <a href="https://github.com/yourgithub" target="_blank" style="text-decoration: none; color: #000;">
+            💻 GitHub
+          </a>
+        </div>
+      </footer>
+      
+</body>
+
+</html>
