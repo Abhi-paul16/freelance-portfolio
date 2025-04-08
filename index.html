@@ -2,281 +2,241 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek | Web Developer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek | Fullstack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom right, #f0f4ff, #fdf6ff);
-            color: #333;
-            line-height: 1.6;
-        }
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
 
-        header,
-        section,
-        footer {
-            padding: 2rem 1.5rem;
-            max-width: 960px;
-            margin: auto;
-        
-        }
-        footer{
-            text-align: center;
-        }
-        header {
-            text-align: center;
-            padding-top: 4rem;
-        }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            animation: fadeIn 1s ease-in-out forwards;
-            animation-delay: 0.2s;
-        }
-
-        .profile-pic{
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 1rem 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: #2f80ed;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #1c60b3;
-        }
-
-        .services,
-        .projects,
-        .testimonials,
-        .cta {
-            margin-top: 3rem;
-            animation: fadeInUp 0.8s ease-in-out forwards;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .service-item,
-        .testimonial,
-        .project {
-            background: white;
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .service-item:hover,
-        .testimonial:hover,
-        .project:hover {
-            transform: translateY(-5px);
-        }
-
-        .project,
-        .testimonial {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .project img,
-        .testimonial img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-details,
-        .testimonial-details {
-            flex: 1;
-        }
-        .t
-
-        footer {
-            text-align: center;
-            padding-bottom: 3rem;
-            font-size: 0.9rem;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            .project,
-            .testimonial {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .project img,
-            .testimonial img {
-                margin: auto;
-                height: auto;
-            }
-
-            .project-details {
-                text-align: center;
-            }
-        }
-    </style>
+    .animate-marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+  </style>
 </head>
 
-<body>
-    <header>
-        <img src="https://media.licdn.com/dms/image/v2/C4D03AQFdMUT8pxYcQQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1649780932651?e=1749686400&v=beta&t=uvkZbsv03pPLPch2ym_RbWmlCFZjeS1ksRJuEKUCU2Q" class="profile-pic"  alt="profile pic "/>
-        <h1>Hi, I’m Abhishek</h1>
-        <p>I help small businesses, freelancers & creators build fast, clean websites that convert.</p>
-        <p>Let’s build your online presence today 🚀.  </p>
-        <!-- <a href="https://wa.me/91XXXXXXXXXX" class="btn">WhatsApp Me</a> -->
-        <a href="#projects" class="btn">View Work</a>
-    </header>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <!-- <header class="bg-blue-600 text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Abhishek</h1>
+      <button id="menu-toggle" class="lg:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:flex space-x-4 flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-blue-600 md:bg-transparent md:space-y-0 space-y-2 p-4 md:p-0 z-50">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#testimonials" class="hover:underline">Testimonials</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+ 
+  <div id="mobile-menu" class="lg:hidden px-4 transition-all duration-300 ease-in-out max-h-0 overflow-hidden bg-white">
+    <nav class="flex flex-col space-y-4 py-4">
+      <a href="#" class="hover:text-blue-500">Home</a>
+      <a href="#" class="hover:text-blue-500">Projects</a>
+      <a href="#" class="hover:text-blue-500">Contact</a>
+    </nav>
+  </div>
+    </div>
+  </header> -->
 
-    <section class="services">
-        <h2>✨ What I Can Build For You</h2>
-        <ul>
-            <li class="service-item">Static Business Websites (startups, creators, service providers)</li>
-            <li class="service-item"> Web Apps (For startup, automating internal processes, or creating tools for your customers )</li>
-            <li class="service-item">Portfolio & Landing Pages (for events, SaaS, personal branding)</li>
-        </ul>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2>🧑‍💻 Projects / Work Samples</h2>
-        <div class="project">
-            <img src="https://www.triazinesoft.com/img/clients-project/ticketkore/ticketkore-icon.png" alt="Ticketkore">
-            <div class="project-details"> <a href="https://ticketkore.io" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <strong>Ticketkore.io</strong> – Event ticketing platform (Production-level Web App)
-                </a></div>
-        </div>
-        <div class="project">
-            <img src="https://www.triazinesoft.com/img/clients-project/logo-icon/housepital.png" alt="Housepital">
-            <div class="project-details">
-                <a href="https://www.housepital.in/" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                <strong> Housepital.in </strong> – Health services aggregator with location-based search </a></div>
-        </div>
-        <div class="project">
-            <img src="https://www.triazinesoft.com/img/clients-project/logo-icon/patched.png" alt="Housepital">
-            <div class="project-details">
-                <a href="https://dev.patched.tech/" target="_blank"
-                style="text-decoration: none; color: inherit;"> <strong> Patched.tech </strong> – Renting Lands Platform </a></div>
-        </div>
-        
-        <!-- <div class="project">
-            <img src="https://via.placeholder.com/80" alt="Ecommerce">
-            <div class="project-details">
-                <a href="https://www.housepital.in/" target="_blank"
-                style="text-decoration: none; color: inherit;">
-            <strong> Grassrootsmarketplace.org</strong>
-                 – Full-stack ecommerce solution for a marketplace </a>
-            </div>
-        </div> -->
-
-    </section>
-
-    <section class="testimonials">
-        <h2>🌟 What Clients Say</h2>
-        <div class="testimonial">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Rohan">
-            <div class="testimonial-details">"Abhishek delivered exactly what I needed, super fast. Highly recommend!" –
-                Rohan, Event Manager</div>
-        </div>
-        <div class="testimonial">
-            <img src="https://images.unsplash.com/photo-1590473159791-1d514fd3656e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Meera">
-            <div class="testimonial-details">"My portfolio site looks amazing thanks to Abhishek!" – Meera, Freelancer
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <h2>📞 Let's Work Together</h2>
-        <p>Want a fast, clean website for your business or idea?</p>
-        <a href="mailto:abhishek1100861@gmail.com" class="btn">Email Me</a>
-        <!-- <a href="https://wa.me/d" class="btn">WhatsApp Me</a> -->
-    </section>
-
-    <footer>
-        <p>© 2025 Abhishek | Web Developer</p>
-        <div style="margin-top: 1rem;">
-          <a href="https://www.linkedin.com/in/abhi-paul16/" target="_blank" style="margin-right: 1rem; text-decoration: none; color: #0a66c2;">
-            🔗 LinkedIn
-          </a>
-          <a href="https://github.com/Abhi-paul16" target="_blank" style="text-decoration: none; color: #000;">
-            💻 GitHub
-          </a>
-        </div>
-      </footer>
+  <header class="bg-blue-600 text-white  shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-xl font-bold">Abhishek</div>
       
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="lg:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex space-x-6">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#testimonials" class="hover:underline">Testimonials</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden px-4 transition-all duration-300 ease-in-out max-h-0 overflow-hidden bg-white">
+      <nav class="flex flex-col space-y-4 py-4">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#testimonials" class="hover:underline">Testimonials</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-100 to-blue-50 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Fullstack Developer & Web Solutions Specialist</h2>
+      <p class="text-base md:text-lg text-gray-600 mb-8">Crafting modern, scalable websites and web applications for creators, professionals, and businesses.</p>
+      <a href="#contact"
+        class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">Let's Work
+        Together</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-white px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="text-gray-700 text-base md:text-lg">I'm Abhishek, a fullstack developer with 3 years of experience working with React.js, Next.js, Node.js, and JavaScript. I've built high-impact projects including <strong>ticketkore.io</strong>, <strong>housepital.in</strong>, <strong>grassrootsmarketplace.org</strong>, and <strong>pgrkam.com</strong>. My focus is on performance, clean code, and user-first design.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-blue-50 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Repeat this div for each service -->
+      <div class="bg-white shadow-lg p-6 rounded-xl text-center border">
+        <img src="/images/web-devlopment.svg" alt="Static Website" class="h-36 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Static Website Development</h3>
+        <p>I create fast, SEO-friendly static sites to establish your online presence.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl text-center border">
+        <img src="/images/web-dev-1.svg" alt="Web App" class="h-36 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Custom Web App</h3>
+        <p>Scalable web applications tailored to your business needs and goals.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl text-center border">
+        <img src="/images/web-dev-3.svg" alt="Portfolio" class="h-36 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Portfolio / Brand Website</h3>
+        <p>Beautiful, modern websites for creators, freelancers and influencers.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl text-center border">
+        <img src="/images/web-dev-2.svg" alt="Landing Pages" class="h-36 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Landing Pages</h3>
+        <p>Conversion-focused landing pages for marketing campaigns or products.</p>
+      </div>
+      <div class="bg-white shadow-lg p-6 rounded-xl text-center border">
+        <img src="/images/web-dev-4.svg" alt="Maintenance" class="h-36 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Maintenance & Optimization</h3>
+        <p>Keep your website running smoothly and optimized for speed and UX.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 bg-white px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-10">Projects</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h4 class="font-semibold text-lg mb-2">Ticketkore</h4>
+          <p class="text-gray-600 mb-2">Event ticketing platform</p>
+          <a href="https://ticketkore.io" class="text-blue-600 hover:underline">ticketkore.io</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h4 class="font-semibold text-lg mb-2">Housepital</h4>
+          <p class="text-gray-600 mb-2">Home healthcare solutions</p>
+          <a href="https://housepital.in" class="text-blue-600 hover:underline">housepital.in</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h4 class="font-semibold text-lg mb-2">Grassroots Marketplace</h4>
+          <p class="text-gray-600 mb-2">E-commerce for rural artisans</p>
+          <a href="https://grassrootsmarketplace.org" class="text-blue-600 hover:underline">grassrootsmarketplace.org</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h4 class="font-semibold text-lg mb-2">PGRKAM</h4>
+          <p class="text-gray-600 mb-2">Government employment portal</p>
+          <a href="https://pgrkam.com" class="text-blue-600 hover:underline">pgrkam.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-gray-50 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-10">What People Say</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold">Dr. A.K. Sharma</p>
+              <p class="text-sm text-gray-500">Clinic Owner</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">“Abhishek created our website and helped us go digital! It’s sleek, fast, and exactly what we needed.”</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold">Priya Verma</p>
+              <p class="text-sm text-gray-500">Fashion Brand Owner</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">“Very responsive, creative and focused. Loved the UI design work on our boutique store.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="text-gray-700 mb-4">Want to build something great together? Let’s connect!</p>
+      <a href="mailto:abhishek1100861@gmail.com"
+        class="text-blue-600 text-lg font-semibold hover:underline">abhishek1100861@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+      <p class="text-sm">© 2025 Abhishek | Fullstack Developer</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="https://github.com/Abhi-paul16" class="hover:underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhi-paul16/" class="hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('max-h-0')) {
+        mobileMenu.classList.remove('max-h-0');
+        mobileMenu.classList.add('max-h-96'); // Adjust as needed
+      } else {
+        mobileMenu.classList.remove('max-h-96');
+        mobileMenu.classList.add('max-h-0');
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
